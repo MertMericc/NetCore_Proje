@@ -1,5 +1,6 @@
 ﻿using BusinessLayer.Concrete;
 using DataAccessLayer.EntityFramework;
+using EntityLayer.Concrete;
 using Microsoft.AspNetCore.Mvc;
 using System;
 using System.Collections.Generic;
@@ -15,6 +16,19 @@ namespace NetCore_Proje.Controllers
         {
             var values = portfolioManager.TGetList();
             return View(values);
+        }
+
+        [HttpGet]
+        public IActionResult AddPortfolio()
+        {
+            return View();
+        }
+
+        [HttpPost]
+        public IActionResult AddPortfolio(Portfolio p)
+        {
+            portfolioManager.TAdd(p);
+            return RedirectToAction("Index");
         }
     }
 }
