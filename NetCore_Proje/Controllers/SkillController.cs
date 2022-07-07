@@ -37,10 +37,6 @@ namespace NetCore_Proje.Controllers
         [HttpGet]
         public IActionResult EditSkill(int id)
         {
-            ViewBag.v1 = "Düzenleme";
-            ViewBag.v2 = "Yetenekler";
-            ViewBag.v3 = "Yetenek Güncelleme";
-
             var values = skillManager.TGetByID(id);
             return View(values);
         }
