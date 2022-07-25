@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace NetCore_Proje.Controllers
 {
-    //[Authorize(Roles = "Admin")]
+    [Authorize(Roles = "Admin")]
     public class DashboardController : Controller
     {
         public IActionResult Index()
