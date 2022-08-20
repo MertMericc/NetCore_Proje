@@ -1,4 +1,5 @@
 ﻿using EntityLayer.Concrete;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using NetCore_Proje.Areas.Writer.Models;
@@ -10,6 +11,7 @@ using System.Threading.Tasks;
 
 namespace NetCore_Proje.Areas.Writer.Controllers
 {
+    
     [Area("Writer")]
     [Route("Writer/[controller]/[action]")]
     public class ProfileController : Controller
